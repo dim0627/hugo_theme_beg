@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta property="og:url" content="http://yet.unresolved.xyz/hugo_theme_beg">
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting Started with Hugo &middot; Beg">
+
+
+<meta property="og:site_name" content="Beg">
+
+<title>
+    
+    Getting Started with Hugo
+    
+</title>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/github.min.css">
+<link rel="stylesheet" href="http://yet.unresolved.xyz/hugo_theme_beg/css/styles.css">
+<link rel="stylesheet" href="http://yet.unresolved.xyz/hugo_theme_beg/css/custom.css">
+
+
+<link rel="shortcut icon" href="http://yet.unresolved.xyz/hugo_theme_beg/assets/favicon.ico">
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yet.unresolved.xyz/hugo_theme_beg/index.xml">
+
+
+<header class="nav">
+    <nav class="navbar navbar-default">
+        <div class="container container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://yet.unresolved.xyz/hugo_theme_beg">Beg</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://yet.unresolved.xyz/hugo_theme_beg/post">All Posts</a></li>
+                    
+                    <li><a href="http://yet.unresolved.xyz/hugo_theme_beg/about/">About Hugo</a></li>
+                    
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="https://www.facebook.com/daisuke.tsuji.735" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                            Facebook</a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/dim0627" target="_blank">
+                            <i class="fa fa-twitter-square"></i>
+                            Twitter</a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/dim0627" target="_blank">
+                            <i class="fa fa-github-square"></i>
+                            GitHub
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+
+
+<div class="row">
+    <div class="col-md-8">
+        <article class="post">
+
+            <header>
+                <div class="post-date">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <time datetime="Wed, Apr 2, 2014">
+                        Wed, Apr 2, 2014
+                    </time>
+                </div>
+                <h1 class="post-title">
+                    <a href="http://yet.unresolved.xyz/hugo_theme_beg/blog/2014/04/02/getting-started-with-hugo/">Getting Started with Hugo</a>
+                </h1>
+            </header>
+
+            <div class="post-content">
+                
+
+<h2 id="step-1-install-hugo:c57cc0038c788519b441e0331c8bebc7">Step 1. Install Hugo</h2>
+
+<p>Goto <a href="https://github.com/spf13/hugo/releases">hugo releases</a> and download the
+appropriate version for your os and architecture.</p>
+
+<p>Save it somewhere specific as we will be using it in the next step.</p>
+
+<p>More complete instructions are available at <a href="/overview/installing/">installing hugo</a></p>
+
+<h2 id="step-2-build-the-docs:c57cc0038c788519b441e0331c8bebc7">Step 2. Build the Docs</h2>
+
+<p>Hugo has its own example site which happens to also be the documentation site
+you are reading right now.</p>
+
+<p>Follow the following steps:</p>
+
+<ol>
+<li>Clone the <a href="http://github.com/spf13/hugo">hugo repository</a></li>
+<li>Go into the repo</li>
+<li>Run hugo in server mode and build the docs</li>
+<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
+</ol>
+
+<p>Corresponding pseudo commands:</p>
+
+<pre><code>git clone https://github.com/spf13/hugo
+cd hugo
+/path/to/where/you/installed/hugo server --source=./docs
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Press ctrl+c to stop
+</code></pre>
+
+<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
+
+<h2 id="step-3-change-the-docs-site:c57cc0038c788519b441e0331c8bebc7">Step 3. Change the docs site</h2>
+
+<p>Stop the Hugo process by hitting ctrl+c.</p>
+
+<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
+
+<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
+&gt; Press ctrl+c to stop
+</code></pre>
+
+<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
+content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
+
+<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
+are located at the same relative location as the url, in our case
+<code>docs/content/overview/quickstart.md</code>.</p>
+
+<p>Change and save this file.. Notice what happened in your terminal.</p>
+
+<pre><code>&gt; Change detected, rebuilding site
+
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 26 ms
+</code></pre>
+
+<p>Refresh the browser and observe that the typo is now fixed.</p>
+
+<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building.. I double dare you.
+Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
+
+<h2 id="step-4-have-fun:c57cc0038c788519b441e0331c8bebc7">Step 4. Have fun</h2>
+
+<p>The best way to learn something is to play with it.</p>
+
+            </div>
+
+            <aside>
+                
+                <ul class="list-inline post-tags">
+                    
+                    <li>
+                        <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/go">
+                            <i class="fa fa-tags"></i>
+                            go
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/golang">
+                            <i class="fa fa-tags"></i>
+                            golang
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/hugo">
+                            <i class="fa fa-tags"></i>
+                            hugo
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/development">
+                            <i class="fa fa-tags"></i>
+                            development
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                
+                
+                <h3>Related Post</h3>
+                <ul class="post-rels">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://yet.unresolved.xyz/hugo_theme_beg/blog/2014/04/02/hugo-template-primer/">(Hu)go Template Primer</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </aside>
+            
+            
+            <footer>
+
+                <nav>
+                    <ul class="pager">
+
+                        
+                        <li class="previous"><a href="http://yet.unresolved.xyz/hugo_theme_beg/blog/2014/04/02/hugo-template-primer/"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        
+
+                        <li><a href="http://yet.unresolved.xyz/hugo_theme_beg/post">All Posts</a></li>
+
+                        
+                        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        
+
+                    </ul>
+                </nav>
+
+                
+                
+                
+            </footer>
+
+        </article>
+    </div>
+    <div class="col-md-4">
+        
+<aside>
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-4 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Recent Posts</h2>
+                </div>
+                <div class="list-group">
+                    
+                    <a href="/hugo_theme_beg/about/" class="list-group-item">About Hugo</a>
+                    
+                    <a href="/hugo_theme_beg/blog/2014/04/02/hugo-template-primer/" class="list-group-item">(Hu)go Template Primer</a>
+                    
+                    <a href="/hugo_theme_beg/blog/2014/04/02/getting-started-with-hugo/" class="list-group-item">Getting Started with Hugo</a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Tags</h2>
+                </div>
+                <div class="list-group">
+                    
+                    
+                    
+                    <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/development" class="list-group-item">
+                        <span class="badge">2</span>
+                        development
+                    </a>
+                    
+                    
+                    <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/go" class="list-group-item">
+                        <span class="badge">2</span>
+                        go
+                    </a>
+                    
+                    
+                    <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/golang" class="list-group-item">
+                        <span class="badge">2</span>
+                        golang
+                    </a>
+                    
+                    
+                    <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/hugo" class="list-group-item">
+                        <span class="badge">1</span>
+                        hugo
+                    </a>
+                    
+                    
+                    <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/templates" class="list-group-item">
+                        <span class="badge">1</span>
+                        templates
+                    </a>
+                    
+                    
+                    <a href="http://yet.unresolved.xyz/hugo_theme_beg/tags/themes" class="list-group-item">
+                        <span class="badge">1</span>
+                        themes
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</aside>
+
+    </div>
+</div>
+
+</div>
+
+<hr>
+<footer class="container copy">
+    <p>&copy; 2014  Daisuke Tsuji </p>
+	<p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a></p>
+	<p>Theme <a href="https://github.com/dim0627/hugo_theme_hugostrap" target="_blank">Hugostrap</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a>, Inspired from <a href="https://github.com/kAworu/octostrap3" target="_blank">Octostrap3</a></p>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-55005303-5', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+document.write('<script src="//sharebutton.net/plugin/sharebutton.php?type=horizontal&u=' + encodeURIComponent(document.location.href) + '"></scr' + 'ipt>');
+</script>
+

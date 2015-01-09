@@ -1,24 +1,24 @@
-BaseUrl: "http://example.com"
+BaseUrl: "http://yet.unresolved.xyz"
 LanguageCode: "en-us"
-Title: "Aglaus"
+Title: "Beg"
 
 Params:
-  Author: "Your name."
+  Author: "Daisuke Tsuji"
   Birth: "Sun, Feb 26, 1989"
   DateForm: "Mon, Jan 2, 2006"
-  GoogleAnalyticsUserID: "Your ID."
-  GravatarHash: "Your Hash."
-  Facebook: "Your ID."
-  Twitter: "Your ID."
-  Github: "Your ID."
+  GoogleAnalyticsUserID: "UA-55005303-5"
+  GravatarHash: "1e092e9f2cda827deb8623be2e846936"
+  Facebook: "daisuke.tsuji.735"
+  Twitter: "dim0627"
+  Github: "dim0627"
   ShowRelatedPost: True
-  Disqus: "Your Disqus."
+  Disqus: "unresolved"
+  SyntaxHighlightTheme: "github.min.css"
 
 Indexes:
   tag: "tags"
 
 permalinks:
-  post: /blog/:year/:month/:day/:title/
+  post: /blog/:year/:month/:day/:slug/
 
 MetadataFormat: "yaml"
-

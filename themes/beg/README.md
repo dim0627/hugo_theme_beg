@@ -1,9 +1,6 @@
-# Aglaus
+# Beg
 
-    Sorry, I do not have a good at English.
-    It is naive English, but please acknowledge.
-
-Aglaus is a single-column theme for [Hugo](http://gohugo.io/).
+Beg is a single-column theme for [Hugo](http://gohugo.io/).
 
 ![Aglaus Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/top.png)
 
@@ -14,11 +11,9 @@ Aglaus is a single-column theme for [Hugo](http://gohugo.io/).
 ## Features
 
 * Google Analytics
-* Gravatar Profile
 * Disqus
 * SNS Links(Facebook, Twitter, GitHub)
 * Share Button
-* Eye-catching Image
 * Tagging
 * Related Post
 
@@ -36,11 +31,11 @@ If you would like to install all of the available hugo themes, simply clone the 
 
     mkdir themes
     cd themes
-    git clone https://github.com/dim0627/hugo_theme_aglaus aglaus
+    git clone https://github.com/dim0627/hugo_theme_beg beg
     
-## Build with Aglaus
+## Build with Beg
 
-    hugo server -t aglaus
+    hugo server -t beg
 
 # Configuration
 

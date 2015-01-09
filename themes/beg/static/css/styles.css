@@ -1,0 +1,28 @@
+pre {
+    padding: 0;
+}
+
+nav.navbar {
+    margin: 5px;
+}
+
+header.nav {
+    margin-bottom: 50px;
+}
+
+.post-title {
+    margin-top: 0;
+}
+
+.post-content {
+    margin-bottom: 20px;
+}
+
+.post-tags,
+.post-rels {
+    margin-bottom: 50px;
+}
+
+footer.copy {
+    padding: 20px 0;
+}

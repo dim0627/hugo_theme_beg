@@ -1,0 +1,56 @@
+<meta charset="utf-8">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta property="og:url" content="{{ .Site.BaseUrl }}">
+{{ if eq .Url "/" }}
+<!-- Index -->
+<meta property="og:type" content="website">
+{{ range first 1 .Data.Pages }}
+<meta property="og:title" content="{{ .Site.Title }}">
+{{ if isset .Params "eyecatch" }}
+<meta property="og:image" content="{{ .Site.BaseUrl }}/images/{{ .Params.eyecatch }}">
+{{ end }}
+{{ end }}
+{{ else if eq .Url "/post/" }}
+<!-- Post -->
+<meta property="og:title" content="All Entries &middot; {{ .Site.Title }}">
+{{ else if in .Url "/tags/" }}
+<!-- Category -->
+<meta property="og:title" content="{{ .Site.Title }}">
+{{ else }}
+<!-- Article -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
+{{ if isset .Params "eyecatch" }}
+<meta property="og:image" content="{{ .Site.BaseUrl }}/images/{{ .Params.eyecatch }}">
+{{ end }}
+{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+
+<title>
+    {{ if eq .Url "/" }}
+    {{ .Site.Title }}
+    {{ else if eq .Url "/post/" }}
+    All Entries &middot; {{ .Site.Title }}
+    {{ else if in .Url "/tags/" }}
+    {{ .Site.Title }}
+    {{ else }}
+    {{ .Title }}
+    {{ end }}
+</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/{{ .Site.Params.SyntaxHighlightTheme }}">
+<link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/styles.css">
+<link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/custom.css">
+
+<!-- Icons -->
+<link rel="shortcut icon" href="{{ .Site.BaseUrl }}/assets/favicon.ico">
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ .Site.BaseUrl }}/index.xml">

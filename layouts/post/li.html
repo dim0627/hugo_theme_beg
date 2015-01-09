@@ -1,0 +1,22 @@
+
+<article class="post">
+    <header>
+        <div class="post-date">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="{{ .Date.Format .Site.Params.DateForm }}">
+                {{ .Date.Format .Site.Params.DateForm }}
+            </time>
+        </div>
+        <h1 class="post-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h1>
+    </header>
+    <div class="post-content">
+        {{ .Summary }}
+    </div>
+    <footer class="readon">
+        <a href="{{ .Permalink }}">
+            READ ON
+        </a>
+    </footer>
+</article>

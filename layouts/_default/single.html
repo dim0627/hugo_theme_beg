@@ -1,82 +1,82 @@
 {{ partial "default_head.html" . }}
 
-<article class="post">
+<div class="row">
+    <div class="col-md-8">
+        <article class="post">
 
-    <header>
-        <div class="post-date">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="{{ .Date.Format .Site.Params.DateForm }}">
-                {{ .Date.Format .Site.Params.DateForm }}
-            </time>
-        </div>
-        <h1 class="post-title">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h1>
-    </header>
+            <header>
+                <div class="post-date">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <time datetime="{{ .Date.Format .Site.Params.DateForm }}">
+                        {{ .Date.Format .Site.Params.DateForm }}
+                    </time>
+                </div>
+                <h1 class="post-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h1>
+            </header>
 
-    <div class="post-content">
-        {{ .Content }}
-    </div>
+            <div class="post-content">
+                {{ .Content }}
+            </div>
 
-    {{ if .Site.Params.ShowRelatedPost }}
-    <aside>
-        <!-- Related post. -->
-        <h3>Related Post</h3>
+            <aside>
+                {{ $baseurl := .Site.BaseUrl }}
+                <ul class="list-inline post-tags">
+                    {{ range .Params.tags }}
+                    <li>
+                        <a href="{{ $baseurl }}/tags/{{ . | urlize }}">
+                            <i class="fa fa-tags"></i>
+                            {{ . }}
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
 
-        {{ $baseurl := .Site.BaseUrl }}
-        <ul class="post-tags">
-            {{ range .Params.tags }}
-            <li>
-                <a href="{{ $baseurl }}/tags/{{ . | urlize }}">
-                    <i class="fa fa-tags"></i>
-                    {{ . }}
-                </a>
-            </li>
+                {{ if .Site.Params.ShowRelatedPost }}
+                <!-- Related post. -->
+                <h3>Related Post</h3>
+                <ul class="post-rels">
+                    {{ $page_link := .Permalink }}
+                    {{ $tags := .Params.tags }}
+                    {{ range .Site.Recent }}
+                    {{ $page := . }}
+                    {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+                    {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+                    <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </aside>
             {{ end }}
-        </ul>
+            <!-- Pagination. -->
+            <footer>
 
-        <ul class="post-rels">
-            {{ $page_link := .Permalink }}
-            {{ $tags := .Params.tags }}
-            {{ range .Site.Recent }}
-            {{ $page := . }}
-            {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
-            {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
-            <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
-            {{ end }}
-            {{ end }}
-        </ul>
-    </aside>
-    {{ end }}
+                <nav>
+                    <ul class="pager">
 
-    <!-- Pagination. -->
-    <footer>
+                        {{ if .Prev }}
+                        <li class="previous"><a href="{{ .Prev.Permalink }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        {{ else }}
+                        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        {{ end }}
 
-        <nav>
-          <ul class="pager">
+                        <li><a href="{{ .Site.BaseUrl }}/post">All Posts</a></li>
 
-            {{ if .Prev }}
-            <li class="previous"><a href="{{ .Prev.Permalink }}"><span aria-hidden="true">&larr;</span> Older</a></li>
-            {{ else }}
-            <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
-            {{ end }}
+                        {{ if .Next }}
+                        <li class="next"><a href="{{ .Next.Permalink }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        {{ else }}
+                        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        {{ end }}
 
-            <li><a href="{{ .Site.BaseUrl }}/post">All Posts</a></li>
+                    </ul>
+                </nav>
 
-            {{ if .Next }}
-            <li class="next"><a href="{{ .Next.Permalink }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
-            {{ else }}
-            <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
-            {{ end }}
-
-          </ul>
-        </nav>
-
-        {{ if isset .Site.Params "Disqus" }}
-        {{ if .Params.comments }}
-        <!-- disqus. -->
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
+                {{ if isset .Site.Params "Disqus" }}
+                {{ if .Params.comments }}
+                <!-- disqus. -->
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 var disqus_shortname = '{{ .Site.Params.Disqus }}'; // required: replace example with your forum shortname
 
@@ -86,12 +86,17 @@ var disqus_shortname = '{{ .Site.Params.Disqus }}'; // required: replace example
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        {{ end }}
-        {{ end }}
-    </footer>
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                {{ end }}
+                {{ end }}
+            </footer>
 
-</article>
+        </article>
+    </div>
+    <div class="col-md-4">
+        {{ partial "sidebar.html" . }}
+    </div>
+</div>
 
 {{ partial "default_foot.html" . }}

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Beg </title>
-    <link>http://yet.unresolved.xyz/tags/beg/</link>
+    <link>http://yet.unresolved.xyz/hugo_theme_beg/tags/beg/</link>
     <language>en-us</language>
     <author>Daisuke Tsuji</author>
     <rights>(C) 2015</rights>
@@ -12,10 +12,10 @@
       
         <item>
           <title>About Beg</title>
-          <link>http://yet.unresolved.xyz/blog/2015/01/10/about-beg/</link>
+          <link>http://yet.unresolved.xyz/hugo_theme_beg/blog/2015/01/10/about-beg/</link>
           <pubDate>Sat, 10 Jan 2015 00:00:00 UTC</pubDate>
           <author>Daisuke Tsuji</author>
-          <guid>http://yet.unresolved.xyz/blog/2015/01/10/about-beg/</guid>
+          <guid>http://yet.unresolved.xyz/hugo_theme_beg/blog/2015/01/10/about-beg/</guid>
           <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/dim0627/hugo_theme_beg&#34;&gt;Beg&lt;/a&gt; is the theme for &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;

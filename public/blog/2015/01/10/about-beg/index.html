@@ -9,14 +9,14 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Getting Started with Hugo &middot; Beg">
+<meta property="og:title" content="About Beg &middot; Beg">
 
 
 <meta property="og:site_name" content="Beg">
 
 <title>
     
-    Getting Started with Hugo
+    About Beg
     
 </title>
 
@@ -94,114 +94,71 @@
             <header>
                 <div class="post-date">
                     <span class="glyphicon glyphicon-calendar"></span>
-                    <time datetime="Wed, Apr 2, 2014">
-                        Wed, Apr 2, 2014
+                    <time datetime="Sat, Jan 10, 2015">
+                        Sat, Jan 10, 2015
                     </time>
                 </div>
                 <h1 class="post-title">
-                    <a href="http://yet.unresolved.xyz/blog/2014/04/02/getting-started-with-hugo/">Getting Started with Hugo</a>
+                    <a href="http://yet.unresolved.xyz/blog/2015/01/10/about-beg/">About Beg</a>
                 </h1>
             </header>
 
             <div class="post-content">
                 
 
-<h2 id="step-1-install-hugo:c57cc0038c788519b441e0331c8bebc7">Step 1. Install Hugo</h2>
+<p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> is the theme for <a href="http://gohugo.io/">Hugo</a>.</p>
 
-<p>Goto <a href="https://github.com/spf13/hugo/releases">hugo releases</a> and download the
-appropriate version for your os and architecture.</p>
+<h2 id="install-hugo:33aa6c1cc1b431231d6c5fbeeebf5cd4">Install hugo</h2>
 
-<p>Save it somewhere specific as we will be using it in the next step.</p>
+<p>Please read <a href="http://gohugo.io/overview/quickstart/">Hugo Quickstart Guide</a>.</p>
 
-<p>More complete instructions are available at <a href="/overview/installing/">installing hugo</a></p>
+<h2 id="install-beg:33aa6c1cc1b431231d6c5fbeeebf5cd4">Install beg</h2>
 
-<h2 id="step-2-build-the-docs:c57cc0038c788519b441e0331c8bebc7">Step 2. Build the Docs</h2>
+<p>Please clone from my repository.</p>
 
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-
-<p>Follow the following steps:</p>
-
-<ol>
-<li>Clone the <a href="http://github.com/spf13/hugo">hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
-</ol>
-
-<p>Corresponding pseudo commands:</p>
-
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
+<pre><code class="language-sh">mkdir themes
+cd themes
+git clone https://github.com/dim0627/hugo_theme_beg
 </code></pre>
 
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
+<h2 id="run-with-beg:33aa6c1cc1b431231d6c5fbeeebf5cd4">Run with beg</h2>
 
-<h2 id="step-3-change-the-docs-site:c57cc0038c788519b441e0331c8bebc7">Step 3. Change the docs site</h2>
-
-<p>Stop the Hugo process by hitting ctrl+c.</p>
-
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
-
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
+<pre><code class="language-sh">hugo server -t beg
 </code></pre>
 
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
+<h2 id="configuration:33aa6c1cc1b431231d6c5fbeeebf5cd4">Configuration</h2>
 
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
+<pre><code class="language-yaml">BaseUrl: &quot;http://yet.unresolved.xyz&quot;
+LanguageCode: &quot;en-us&quot;
+Title: &quot;Beg&quot;
 
-<p>Change and save this file.. Notice what happened in your terminal.</p>
+Params:
+  Author: &quot;Daisuke Tsuji&quot;
+  DateForm: &quot;Mon, Jan 2, 2006&quot;
+  GoogleAnalyticsUserID: &quot;UA-55005303-5&quot;
+  Facebook: &quot;daisuke.tsuji.735&quot;
+  Twitter: &quot;dim0627&quot;
+  Github: &quot;dim0627&quot;
+  ShowRelatedPost: True
+  Disqus: &quot;unresolved&quot;
+  SyntaxHighlightTheme: &quot;github.min.css&quot;
 
-<pre><code>&gt; Change detected, rebuilding site
+Indexes:
+  tag: &quot;tags&quot;
 
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
+permalinks:
+  post: /blog/:year/:month/:day/:slug/
+
+MetadataFormat: &quot;yaml&quot;
 </code></pre>
 
-<p>Refresh the browser and observe that the typo is now fixed.</p>
-
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building.. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
-
-<h2 id="step-4-have-fun:c57cc0038c788519b441e0331c8bebc7">Step 4. Have fun</h2>
-
-<p>The best way to learn something is to play with it.</p>
+<p>Example : <a href="https://github.com/dim0627/hugo_theme_beg/blob/source/config.yaml">My config.yaml</a></p>
 
             </div>
 
             <aside>
                 
                 <ul class="list-inline post-tags">
-                    
-                    <li>
-                        <a href="http://yet.unresolved.xyz/tags/go">
-                            <i class="fa fa-tags"></i>
-                            go
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="http://yet.unresolved.xyz/tags/golang">
-                            <i class="fa fa-tags"></i>
-                            golang
-                        </a>
-                    </li>
                     
                     <li>
                         <a href="http://yet.unresolved.xyz/tags/hugo">
@@ -211,9 +168,9 @@ Having nearly instant feedback enables you to have your creativity flow without 
                     </li>
                     
                     <li>
-                        <a href="http://yet.unresolved.xyz/tags/development">
+                        <a href="http://yet.unresolved.xyz/tags/beg">
                             <i class="fa fa-tags"></i>
-                            development
+                            beg
                         </a>
                     </li>
                     
@@ -229,7 +186,6 @@ Having nearly instant feedback enables you to have your creativity flow without 
                     
                     
                     
-                    <li><a href="http://yet.unresolved.xyz/blog/2015/01/10/about-beg/">About Beg</a></li>
                     
                     
                     
@@ -238,12 +194,11 @@ Having nearly instant feedback enables you to have your creativity flow without 
                     
                     
                     
+                    <li><a href="http://yet.unresolved.xyz/blog/2014/04/02/getting-started-with-hugo/">Getting Started with Hugo</a></li>
                     
                     
                     
                     
-                    
-                    <li><a href="http://yet.unresolved.xyz/blog/2014/04/02/hugo-template-primer/">(Hu)go Template Primer</a></li>
                     
                     
                 </ul>
@@ -256,13 +211,13 @@ Having nearly instant feedback enables you to have your creativity flow without 
                     <ul class="pager">
 
                         
-                        <li class="previous"><a href="http://yet.unresolved.xyz/about/"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
                         
 
                         <li><a href="http://yet.unresolved.xyz/post">All Posts</a></li>
 
                         
-                        <li class="next"><a href="http://yet.unresolved.xyz/blog/2014/04/02/hugo-template-primer/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next"><a href="http://yet.unresolved.xyz/about/">Newer <span aria-hidden="true">&rarr;</span></a></li>
                         
 
                     </ul>

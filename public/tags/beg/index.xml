@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beg </title>
+    <link>http://yet.unresolved.xyz/tags/beg/</link>
+    <language>en-us</language>
+    <author>Daisuke Tsuji</author>
+    <rights>(C) 2015</rights>
+    <updated>2015-01-10 00:00:00 &#43;0000 UTC</updated>
+
+    
+      
+        <item>
+          <title>About Beg</title>
+          <link>http://yet.unresolved.xyz/blog/2015/01/10/about-beg/</link>
+          <pubDate>Sat, 10 Jan 2015 00:00:00 UTC</pubDate>
+          <author>Daisuke Tsuji</author>
+          <guid>http://yet.unresolved.xyz/blog/2015/01/10/about-beg/</guid>
+          <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dim0627/hugo_theme_beg&#34;&gt;Beg&lt;/a&gt; is the theme for &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-hugo:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Install hugo&lt;/h2&gt;
+
+&lt;p&gt;Please read &lt;a href=&#34;http://gohugo.io/overview/quickstart/&#34;&gt;Hugo Quickstart Guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-beg:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Install beg&lt;/h2&gt;
+
+&lt;p&gt;Please clone from my repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkdir themes
+cd themes
+git clone https://github.com/dim0627/hugo_theme_beg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;run-with-beg:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Run with beg&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;hugo server -t beg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuration:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;BaseUrl: &amp;quot;http://yet.unresolved.xyz&amp;quot;
+LanguageCode: &amp;quot;en-us&amp;quot;
+Title: &amp;quot;Beg&amp;quot;
+
+Params:
+  Author: &amp;quot;Daisuke Tsuji&amp;quot;
+  DateForm: &amp;quot;Mon, Jan 2, 2006&amp;quot;
+  GoogleAnalyticsUserID: &amp;quot;UA-55005303-5&amp;quot;
+  Facebook: &amp;quot;daisuke.tsuji.735&amp;quot;
+  Twitter: &amp;quot;dim0627&amp;quot;
+  Github: &amp;quot;dim0627&amp;quot;
+  ShowRelatedPost: True
+  Disqus: &amp;quot;unresolved&amp;quot;
+  SyntaxHighlightTheme: &amp;quot;github.min.css&amp;quot;
+
+Indexes:
+  tag: &amp;quot;tags&amp;quot;
+
+permalinks:
+  post: /blog/:year/:month/:day/:slug/
+
+MetadataFormat: &amp;quot;yaml&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example : &lt;a href=&#34;https://github.com/dim0627/hugo_theme_beg/blob/source/config.yaml&#34;&gt;My config.yaml&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

@@ -2,20 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Beg </title>
-    <link>http://yet.unresolved.xyz/hugo_theme_beg/tags/hugo/</link>
+    <link>http://yet.unresolved.xyz/tags/hugo/</link>
     <language>en-us</language>
     <author>Daisuke Tsuji</author>
-    <rights>(C) 2014</rights>
-    <updated>2014-04-02 00:00:00 &#43;0000 UTC</updated>
+    <rights>(C) 2015</rights>
+    <updated>2015-01-10 00:00:00 &#43;0000 UTC</updated>
 
     
       
         <item>
+          <title>About Beg</title>
+          <link>http://yet.unresolved.xyz/blog/2015/01/10/about-beg/</link>
+          <pubDate>Sat, 10 Jan 2015 00:00:00 UTC</pubDate>
+          <author>Daisuke Tsuji</author>
+          <guid>http://yet.unresolved.xyz/blog/2015/01/10/about-beg/</guid>
+          <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dim0627/hugo_theme_beg&#34;&gt;Beg&lt;/a&gt; is the theme for &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-hugo:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Install hugo&lt;/h2&gt;
+
+&lt;p&gt;Please read &lt;a href=&#34;http://gohugo.io/overview/quickstart/&#34;&gt;Hugo Quickstart Guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-beg:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Install beg&lt;/h2&gt;
+
+&lt;p&gt;Please clone from my repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkdir themes
+cd themes
+git clone https://github.com/dim0627/hugo_theme_beg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;run-with-beg:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Run with beg&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;hugo server -t beg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuration:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;BaseUrl: &amp;quot;http://yet.unresolved.xyz&amp;quot;
+LanguageCode: &amp;quot;en-us&amp;quot;
+Title: &amp;quot;Beg&amp;quot;
+
+Params:
+  Author: &amp;quot;Daisuke Tsuji&amp;quot;
+  DateForm: &amp;quot;Mon, Jan 2, 2006&amp;quot;
+  GoogleAnalyticsUserID: &amp;quot;UA-55005303-5&amp;quot;
+  Facebook: &amp;quot;daisuke.tsuji.735&amp;quot;
+  Twitter: &amp;quot;dim0627&amp;quot;
+  Github: &amp;quot;dim0627&amp;quot;
+  ShowRelatedPost: True
+  Disqus: &amp;quot;unresolved&amp;quot;
+  SyntaxHighlightTheme: &amp;quot;github.min.css&amp;quot;
+
+Indexes:
+  tag: &amp;quot;tags&amp;quot;
+
+permalinks:
+  post: /blog/:year/:month/:day/:slug/
+
+MetadataFormat: &amp;quot;yaml&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example : &lt;a href=&#34;https://github.com/dim0627/hugo_theme_beg/blob/source/config.yaml&#34;&gt;My config.yaml&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>Getting Started with Hugo</title>
-          <link>http://yet.unresolved.xyz/hugo_theme_beg/blog/2014/04/02/getting-started-with-hugo/</link>
+          <link>http://yet.unresolved.xyz/blog/2014/04/02/getting-started-with-hugo/</link>
           <pubDate>Wed, 02 Apr 2014 00:00:00 UTC</pubDate>
           <author>Daisuke Tsuji</author>
-          <guid>http://yet.unresolved.xyz/hugo_theme_beg/blog/2014/04/02/getting-started-with-hugo/</guid>
+          <guid>http://yet.unresolved.xyz/blog/2014/04/02/getting-started-with-hugo/</guid>
           <description>
 
 &lt;h2 id=&#34;step-1-install-hugo:c57cc0038c788519b441e0331c8bebc7&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;
@@ -25,7 +85,7 @@ appropriate version for your os and architecture.&lt;/p&gt;
 
 &lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
 
-&lt;p&gt;More complete instructions are available at &lt;a href=&#34;http://yet.unresolved.xyz/hugo_theme_beg/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More complete instructions are available at &lt;a href=&#34;http://yet.unresolved.xyz/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;step-2-build-the-docs:c57cc0038c788519b441e0331c8bebc7&#34;&gt;Step 2. Build the Docs&lt;/h2&gt;
 

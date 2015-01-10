@@ -1,12 +1,12 @@
 # Beg
 
-Beg is a single-column theme for [Hugo](http://gohugo.io/).
+Beg is a double-column theme for [Hugo](http://gohugo.io/).
 
-![Aglaus Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/top.png)
+Inspired by [kAworu/octostrap3](https://github.com/kAworu/octostrap3).
 
-![Aglaus Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/bottom.png)
+![Beg Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_beg/master/images/top.png)
 
-![Aglaus Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/post.png)
+![Beg Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_beg/master/images/bottom.png)
 
 ## Features
 
@@ -42,40 +42,37 @@ If you would like to install all of the available hugo themes, simply clone the 
 **config.yaml**
 
 ``` yaml
-BaseUrl: "http://example.com"
+BaseUrl: "http://yet.unresolved.xyz"
 LanguageCode: "en-us"
-Title: "Aglaus"
+Title: "Beg"
 
 Params:
-  Author: "Your name."
-  Birth: "Sun, Feb 26, 1989"
+  Author: "Daisuke Tsuji"
   DateForm: "Mon, Jan 2, 2006"
-  GoogleAnalyticsUserID: "Your ID."
-  GravatarHash: "Your Hash."
-  Facebook: "Your ID."
-  Twitter: "Your ID."
-  Github: "Your ID."
+  GoogleAnalyticsUserID: "UA-55005303-5"
+  Facebook: "daisuke.tsuji.735"
+  Twitter: "dim0627"
+  Github: "dim0627"
   ShowRelatedPost: True
-  Disqus: "Your Disqus."
-  SyntaxHighlightTheme: "solarized_dark.min.css"
+  Disqus: "unresolved"
+  SyntaxHighlightTheme: "github.min.css"
 
 Indexes:
   tag: "tags"
 
 permalinks:
-  post: /blog/:year/:month/:day/:title/
+  post: /blog/:year/:month/:day/:slug/
 
 MetadataFormat: "yaml"
 ```
 
-Example : [My config.yaml](https://github.com/dim0627/dim0627.github.io/blob/source/config.yaml)
+Example : [My config.yaml](https://github.com/dim0627/hugo_theme_beg/blob/source/config.yaml)
 
 **example post**
 
 ``` markdown
 ---
 title: "Post title here"
-eyecatch: "hugo.png" # Eye-cathinc image from [static/images/***]
 date: 2014-09-17
 comments: true
 tags: [gitHub, octopress, jekyll]
@@ -83,12 +80,6 @@ tags: [gitHub, octopress, jekyll]
 
 Contents here
 ```
-
-# Read more details
-
-Please read this.
-
-http://yet.unresolved.xyz/hugo_theme_aglaus/blog/2015/01/06/about-aglaus/
 
 # Contact us
 

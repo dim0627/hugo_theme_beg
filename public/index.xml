@@ -18,27 +18,47 @@
           <guid>http://yet.unresolved.xyz/hugo_theme_beg/blog/2015/01/10/about-beg/</guid>
           <description>
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/dim0627/hugo_theme_beg&#34;&gt;Beg&lt;/a&gt; is the theme for &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Beg is a double-column theme for &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;install-hugo:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Install hugo&lt;/h2&gt;
+&lt;p&gt;Inspired by &lt;a href=&#34;https://github.com/kAworu/octostrap3&#34;&gt;kAworu/octostrap3&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Please read &lt;a href=&#34;http://gohugo.io/overview/quickstart/&#34;&gt;Hugo Quickstart Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;features:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Features&lt;/h2&gt;
 
-&lt;h2 id=&#34;install-beg:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Install beg&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Analytics&lt;/li&gt;
+&lt;li&gt;Disqus&lt;/li&gt;
+&lt;li&gt;SNS Links(Facebook, Twitter, GitHub)&lt;/li&gt;
+&lt;li&gt;Share Button&lt;/li&gt;
+&lt;li&gt;Tagging&lt;/li&gt;
+&lt;li&gt;Related Post&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Please clone from my repository.&lt;/p&gt;
+&lt;h1 id=&#34;installation:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Installation&lt;/h1&gt;
+
+&lt;p&gt;Referred from &lt;a href=&#34;https://github.com/spf13/hugoThemes#installing-themes&#34;&gt;hugoThemes#Installing Themes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;installing-with-other-all-themes:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Installing with other all themes&lt;/h2&gt;
+
+&lt;p&gt;If you would like to install all of the available hugo themes, simply clone the entire repository from within your working directory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone --recursive https://github.com/spf13/hugoThemes.git themes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;installing-a-single-theme:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Installing a single theme&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;mkdir themes
 cd themes
-git clone https://github.com/dim0627/hugo_theme_beg
+git clone https://github.com/dim0627/hugo_theme_beg beg
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;run-with-beg:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Run with beg&lt;/h2&gt;
+&lt;h2 id=&#34;build-with-beg:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Build with Beg&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;hugo server -t beg
+&lt;pre&gt;&lt;code&gt;hugo server -t beg
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;configuration:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Configuration&lt;/h2&gt;
+&lt;h1 id=&#34;configuration:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Configuration&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;config.yaml&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;BaseUrl: &amp;quot;http://yet.unresolved.xyz&amp;quot;
 LanguageCode: &amp;quot;en-us&amp;quot;
@@ -65,6 +85,26 @@ MetadataFormat: &amp;quot;yaml&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Example : &lt;a href=&#34;https://github.com/dim0627/hugo_theme_beg/blob/source/config.yaml&#34;&gt;My config.yaml&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;example post&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;---
+title: &amp;quot;Post title here&amp;quot;
+date: 2014-09-17
+comments: true
+tags: [gitHub, octopress, jekyll]
+---
+
+Contents here
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;contact-us:33aa6c1cc1b431231d6c5fbeeebf5cd4&#34;&gt;Contact us&lt;/h1&gt;
+
+&lt;p&gt;Please mail to &lt;code&gt;dim0627@gmail.com&lt;/code&gt; or SNS.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.facebook.com/daisuke.tsuji.735&#34;&gt;https://www.facebook.com/daisuke.tsuji.735&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/dim0627&#34;&gt;https://twitter.com/dim0627&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
       

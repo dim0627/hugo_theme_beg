@@ -8,31 +8,46 @@ tags = [
 date = "2015-01-10"
 +++
 
-[Beg](https://github.com/dim0627/hugo_theme_beg) is the theme for [Hugo](http://gohugo.io/).
+Beg is a double-column theme for [Hugo](http://gohugo.io/).
 
-## Install hugo
+Inspired by [kAworu/octostrap3](https://github.com/kAworu/octostrap3).
 
-Please read [Hugo Quickstart Guide](http://gohugo.io/overview/quickstart/).
+## Features
 
-## Install beg
+* Google Analytics
+* Disqus
+* SNS Links(Facebook, Twitter, GitHub)
+* Share Button
+* Tagging
+* Related Post
 
-Please clone from my repository.
+# Installation
+
+Referred from [hugoThemes#Installing Themes](https://github.com/spf13/hugoThemes#installing-themes).
+
+## Installing with other all themes
+
+If you would like to install all of the available hugo themes, simply clone the entire repository from within your working directory.
+
+``` sh
+git clone --recursive https://github.com/spf13/hugoThemes.git themes
+```
+
+## Installing a single theme
 
 ``` sh
 mkdir themes
 cd themes
-git clone https://github.com/dim0627/hugo_theme_beg
+git clone https://github.com/dim0627/hugo_theme_beg beg
 ```
 
-## Run with beg
+## Build with Beg
 
-``` sh
-hugo server -t beg
-```
+    hugo server -t beg
 
-<!--more-->
+# Configuration
 
-## Configuration
+**config.yaml**
 
 ``` yaml
 BaseUrl: "http://yet.unresolved.xyz"
@@ -60,3 +75,24 @@ MetadataFormat: "yaml"
 ```
 
 Example : [My config.yaml](https://github.com/dim0627/hugo_theme_beg/blob/source/config.yaml)
+
+**example post**
+
+``` markdown
+---
+title: "Post title here"
+date: 2014-09-17
+comments: true
+tags: [gitHub, octopress, jekyll]
+---
+
+Contents here
+```
+
+# Contact us
+
+Please mail to `dim0627@gmail.com` or SNS.
+
+[https://www.facebook.com/daisuke.tsuji.735](https://www.facebook.com/daisuke.tsuji.735)
+
+[https://twitter.com/dim0627](https://twitter.com/dim0627)

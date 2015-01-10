@@ -9,9 +9,6 @@
 <meta property="og:type" content="website">
 {{ range first 1 .Data.Pages }}
 <meta property="og:title" content="{{ .Site.Title }}">
-{{ if isset .Params "eyecatch" }}
-<meta property="og:image" content="{{ .Site.BaseUrl }}/images/{{ .Params.eyecatch }}">
-{{ end }}
 {{ end }}
 {{ else if eq .Url "/post/" }}
 <!-- Post -->
@@ -23,9 +20,6 @@
 <!-- Article -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
-{{ if isset .Params "eyecatch" }}
-<meta property="og:image" content="{{ .Site.BaseUrl }}/images/{{ .Params.eyecatch }}">
-{{ end }}
 {{ end }}
 <meta property="og:site_name" content="{{ .Site.Title }}">
 

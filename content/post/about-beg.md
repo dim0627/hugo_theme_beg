@@ -21,6 +21,8 @@ Inspired by [kAworu/octostrap3](https://github.com/kAworu/octostrap3).
 * Tagging
 * Related Post
 
+<!--more-->
+
 # Installation
 
 Referred from [hugoThemes#Installing Themes](https://github.com/spf13/hugoThemes#installing-themes).

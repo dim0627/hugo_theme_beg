@@ -6,8 +6,6 @@ Inspired by [kAworu/octostrap3](https://github.com/kAworu/octostrap3).
 
 ![Beg Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_beg/master/images/top.png)
 
-![Beg Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_beg/master/images/bottom.png)
-
 ## Features
 
 * Google Analytics

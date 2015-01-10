@@ -1,9 +1,9 @@
-name = "Aglaus"
+name = "Beg"
 license = "MIT"
-licenselink = "https://github.com/dim0627/hugo_theme_aglaus/blob/master/LICENSE.md"
-description = "Aglaus is list design with eyecatch theme.Inspired by lanyon."
-homepage = "http://yet.unresolved.xyz/hugo_theme_aglaus"
-tags = ["blog", "list", "eyecatch"]
+licenselink = "https://github.com/dim0627/hugo_theme_beg/blob/master/LICENSE.md"
+description = "Beg is Twitter Bootstrap based theme.Inspired by Octostrap3."
+homepage = "http://yet.unresolved.xyz/hugo_theme_beg"
+tags = ["blog", "bootstrap"]
 features = ["blog"]
 
 [author]

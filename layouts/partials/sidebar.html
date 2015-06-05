@@ -21,7 +21,7 @@
                     <h2 class="panel-title">Tags</h2>
                 </div>
                 <div class="list-group">
-                    {{ $baseurl := .Site.BaseUrl }}
+                    {{ $baseurl := .Site.BaseURL }}
                     {{ range $name, $value := .Site.Taxonomies.tags }}
                     <!--a href="{{ $baseurl }}/tags/{{ $name | urlize }}" style="font-size: {{ add 8 (mul 3 $value.Count) }}px;"-->
                     <a href="{{ $baseurl }}/tags/{{ $name | urlize }}" class="list-group-item">

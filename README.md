@@ -69,12 +69,12 @@ Example : [My config.yaml](https://github.com/dim0627/hugo_theme_beg/blob/source
 **example post**
 
 ``` markdown
----
++++
 title: "Post title here"
 date: 2014-09-17
 comments: true
-tags: [gitHub, octopress, jekyll]
----
+tags: ["gitHub", "octopress", "jekyll"]
++++
 
 Contents here
 ```

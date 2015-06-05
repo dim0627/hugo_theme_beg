@@ -3,17 +3,17 @@
 <!-- Enable responsiveness on mobile devices-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-<meta property="og:url" content="{{ .Site.BaseUrl }}">
-{{ if eq .Url "/" }}
+<meta property="og:url" content="{{ .Site.BaseURL }}">
+{{ if eq .URL "/" }}
 <!-- Index -->
 <meta property="og:type" content="website">
 {{ range first 1 .Data.Pages }}
 <meta property="og:title" content="{{ .Site.Title }}">
 {{ end }}
-{{ else if eq .Url "/post/" }}
+{{ else if eq .URL "/post/" }}
 <!-- Post -->
 <meta property="og:title" content="All Entries &middot; {{ .Site.Title }}">
-{{ else if in .Url "/tags/" }}
+{{ else if in .URL "/tags/" }}
 <!-- Category -->
 <meta property="og:title" content="{{ .Site.Title }}">
 {{ else }}
@@ -24,11 +24,11 @@
 <meta property="og:site_name" content="{{ .Site.Title }}">
 
 <title>
-    {{ if eq .Url "/" }}
+    {{ if eq .URL "/" }}
     {{ .Site.Title }}
-    {{ else if eq .Url "/post/" }}
+    {{ else if eq .URL "/post/" }}
     All Entries &middot; {{ .Site.Title }}
-    {{ else if in .Url "/tags/" }}
+    {{ else if in .URL "/tags/" }}
     {{ .Site.Title }}
     {{ else }}
     {{ .Title }}

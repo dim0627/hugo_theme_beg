@@ -8,7 +8,7 @@
                     <h2 class="panel-title">Recent Posts</h2>
                 </div>
                 <div class="list-group">
-                    {{range first 10 .Site.Recent}}
+                    {{range first 10 .Site.Pages}}
                     <a href="{{.RelPermalink}}" class="list-group-item">{{ .Title }}</a>
                     {{ end }}
                 </div>

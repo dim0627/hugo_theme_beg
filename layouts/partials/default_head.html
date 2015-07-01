@@ -13,13 +13,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a>
+                    <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ .Site.BaseUrl }}/post">All Posts</a></li>
-                        {{ range where .Site.Recent "Type" "page" }}
+                        <li><a href="{{ .Site.BaseURL }}/post">All Posts</a></li>
+                        {{ range where .Site.Pages "Type" "page" }}
                         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                         {{ end }}
                     </ul>

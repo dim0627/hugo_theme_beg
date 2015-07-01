@@ -21,7 +21,7 @@
             </div>
 
             <aside>
-                {{ $baseurl := .Site.BaseUrl }}
+                {{ $baseurl := .Site.BaseURL }}
                 <ul class="list-inline post-tags">
                     {{ range .Params.tags }}
                     <li>
@@ -39,7 +39,7 @@
                 <ul class="post-rels">
                     {{ $page_link := .Permalink }}
                     {{ $tags := .Params.tags }}
-                    {{ range .Site.Recent }}
+                    {{ range .Site.Pages }}
                     {{ $page := . }}
                     {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
                     {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
@@ -61,7 +61,7 @@
                         <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
                         {{ end }}
 
-                        <li><a href="{{ .Site.BaseUrl }}/post">All Posts</a></li>
+                        <li><a href="{{ .Site.BaseURL }}/post">All Posts</a></li>
 
                         {{ if .Next }}
                         <li class="next"><a href="{{ .Next.Permalink }}">Newer <span aria-hidden="true">&rarr;</span></a></li>

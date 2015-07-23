@@ -5,6 +5,7 @@ description = "Beg is Twitter Bootstrap based theme.Inspired by Octostrap3."
 homepage = "http://yet.unresolved.xyz/hugo_theme_beg"
 tags = ["blog", "bootstrap"]
 features = ["blog"]
+min_version = 0.14
 
 [author]
     name = "Daisuke Tsuji"

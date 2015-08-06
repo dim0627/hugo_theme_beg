@@ -47,6 +47,14 @@
                             </a>
                         </li>
                         {{ end }}
+                        {{ if isset .Site.Params "Linkedin" }}
+                        <li>
+                            <a href="https://www.linkedin.com/in/{{ .Site.Params.Linkedin }}" target="_blank">
+                                <i class="fa fa-linkedin-square"></i>
+                                LinkedIn
+                            </a>
+                        </li>
+                        {{ end }}
                     </ul>
                 </div>
             </div>

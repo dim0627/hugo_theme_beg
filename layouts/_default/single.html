@@ -56,17 +56,17 @@
                     <ul class="pager">
 
                         {{ if .Prev }}
-                        <li class="previous"><a href="{{ .Prev.Permalink }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous"><a href="{{ .Prev.Permalink }}"><span aria-hidden="true">&larr;</span> Newer</a></li>
                         {{ else }}
-                        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Newer</a></li>
                         {{ end }}
 
                         <li><a href="{{ .Site.BaseURL }}/post">All Posts</a></li>
 
                         {{ if .Next }}
-                        <li class="next"><a href="{{ .Next.Permalink }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next"><a href="{{ .Next.Permalink }}">Older <span aria-hidden="true">&rarr;</span></a></li>
                         {{ else }}
-                        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next disabled"><a href="#">Older <span aria-hidden="true">&rarr;</span></a></li>
                         {{ end }}
 
                     </ul>

@@ -19,6 +19,7 @@
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="{{ .Site.BaseURL }}/post">All Posts</a></li>
+                        <li><a href="{{ .Site.BaseURL }}/tags">Tags</a></li>
                         {{ range where .Site.Pages "Type" "page" }}
                         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                         {{ end }}

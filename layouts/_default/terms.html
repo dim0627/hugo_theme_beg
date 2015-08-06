@@ -1,0 +1,16 @@
+{{ partial "default_head.html" . }}
+
+<section id="main">
+  <div>
+    <h1 id="title">{{ .Title }}</h1>
+
+    <ul>
+    {{ $data := .Data }}
+    {{ range $key, $value := .Data.Terms }}
+      <li><a href="{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}</li>
+    {{ end }}
+   </ul>
+  </div>
+</section>
+
+{{ partial "default_foot.html" . }}

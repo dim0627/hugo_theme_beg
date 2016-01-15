@@ -1,22 +1,17 @@
 {{ partial "default_head.html" . }}
+<div class="index">
 
-<div class="row">
+  <div class="row">
     <div class="col-md-8">
-        <div class="posts">
-            {{ range first 10 (where .Data.Pages "Type" "post") }}
-            {{ .Render "li" }}
-            {{ end }}
-            <nav>
-                <ul class="pager">
-                    <li><a href="{{ .Site.BaseURL }}/post">All Posts</a></li>
-                </ul>
-            </nav>
-
-        </div>
+      {{ range .Paginator.Pages }}
+      {{ .Render "li" }}
+      {{ end }}
+      {{ partial "pagination.html" . }}
     </div>
     <div class="col-md-4">
-        {{ partial "sidebar.html" . }}
+      {{ partial "sidebar.html" . }}
     </div>
-</div>
+  </div>
 
+</div>
 {{ partial "default_foot.html" . }}

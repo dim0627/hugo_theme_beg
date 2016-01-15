@@ -1,23 +1,14 @@
+<article class="li">
+  <header>
+    <div class="date">{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</div>
+    <div class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+  </header>
+  <div class="body">{{ if .Truncated }}{{ .Summary }}{{ else }}{{ .Content }}{{ end }}</div>
 
-<article class="post">
-    <header>
-        <div class="post-date">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="{{ .Date.Format .Site.Params.DateForm }}">
-                {{ .Date.Format .Site.Params.DateForm }}
-            </time>
-        </div>
-        <h1 class="post-title">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h1>
-    </header>
-    <div class="post-content">
-        {{ .Summary }}
-    </div>
-    <footer class="readon">
-        <a href="{{ .Permalink }}" class="btn btn-default">
-            READ ON
-        </a>
-    </footer>
+  {{ if .Truncated }}
+  <footer>
+    <a href="{{ .Permalink }}" class="btn btn-default">Read More…</a>
+  </footer>
+  {{ end }}
 </article>
 <hr>

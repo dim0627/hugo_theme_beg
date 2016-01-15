@@ -1,13 +1,12 @@
 name = "Beg"
 license = "MIT"
 licenselink = "https://github.com/dim0627/hugo_theme_beg/blob/master/LICENSE.md"
-description = "Beg is Twitter Bootstrap based theme.Inspired by Octostrap3."
-homepage = "http://yet.unresolved.xyz/hugo_theme_beg"
+description = "Beg is Twitter Bootstrap based theme."
 tags = ["blog", "bootstrap"]
 features = ["blog"]
-min_version = 0.14
+min_version = 0.15
 
 [author]
     name = "Daisuke Tsuji"
-    homepage = "http://yet.unresolved.xyz"
+    homepage = "http://yet.unresolved.xyz/"
 

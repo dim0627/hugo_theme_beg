@@ -1,9 +1,0 @@
-{{ partial "default_head.html" . }}
-
-<div class="posts">
-    {{ range .Data.Pages }}
-    {{ .Render "li"}}
-    {{ end }}
-</div>
-
-{{ partial "default_foot.html" . }}

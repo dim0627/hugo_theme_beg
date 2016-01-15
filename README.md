@@ -1,79 +1,55 @@
-# Beg
+![screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_aglaus/master/images/screenshot.png)
 
-Beg is a double-column theme for [Hugo](http://gohugo.io/).
-
-Inspired by [kAworu/octostrap3](https://github.com/kAworu/octostrap3).
-
-![Beg Screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_beg/master/images/top.png)
-
-## Features
+# Features
 
 * Google Analytics
 * Disqus
-* SNS Links(Facebook, Twitter, GitHub)
-* Share Button
-* Tagging
-* Related Post
+* Share Buttons(fb, twitter, google+, pocket)
+* Eye-catching Image
+* MicroData
+* Readable text(Customized Vertical Rhythm).
 
 # Installation
 
-Referred from [hugoThemes#Installing Themes](https://github.com/spf13/hugoThemes#installing-themes).
-
-## Installing with other all themes
-
-If you would like to install all of the available hugo themes, simply clone the entire repository from within your working directory.
-
-    git clone --recursive https://github.com/spf13/hugoThemes.git themes
-
-## Installing a single theme
-
-    mkdir themes
-    cd themes
-    git clone https://github.com/dim0627/hugo_theme_beg beg
-    
-## Build with Beg
-
-    hugo server -t beg
+[hugoThemes#Installing Themes](https://github.com/spf13/hugoThemes#installing-themes).
 
 # Configuration
 
 **config.yaml**
 
-``` yaml
-BaseUrl: "http://yet.unresolved.xyz"
-LanguageCode: "en-us"
-Title: "Beg"
+``` toml
+baseurl = "http://hugo.spf13.com/"
+title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
+canonifyurls = true
+paginate = 3
 
-Params:
-  Author: "Daisuke Tsuji"
-  DateForm: "Mon, Jan 2, 2006"
-  GoogleAnalyticsUserID: "UA-55005303-5"
-  Facebook: "daisuke.tsuji.735"
-  Twitter: "dim0627"
-  Github: "dim0627"
-  ShowRelatedPost: True
-  Disqus: "unresolved"
-  SyntaxHighlightTheme: "github.min.css"
-
-Indexes:
-  tag: "tags"
-
-permalinks:
-  post: /blog/:year/:month/:day/:slug/
-
-MetadataFormat: "yaml"
+[params]
+  disqusShortname = "your disqus id." # optional
+  toc = true # optional, When set to TRUE this parameter, table of contents appears in all articles.
 ```
-
-Example : [My config.yaml](https://github.com/dim0627/hugo_theme_beg/blob/source/config.yaml)
 
 **example post**
 
-``` markdown
+``` toml
 +++
-title: "Post title here"
-date: 2014-09-17
-comments: true
-tags: ["gitHub", "octopress", "jekyll"]
+title = "Getting Started with Hugo"
+description = ""
+tags = [
+    "go",
+    "golang",
+    "hugo",
+    "development",
+]
+date = "2014-04-02"
+categories = [
+    "Development",
+    "golang",
+]
+
+image = "image.jpg" # optional
+toc = true # optional, When set to TRUE this parameter, table of contents appears in only this article.
 +++
 
 Contents here
@@ -85,4 +61,3 @@ Please mail to `dim0627@gmail.com` or SNS.
 
 [https://www.facebook.com/daisuke.tsuji.735](https://www.facebook.com/daisuke.tsuji.735)
 
-[https://twitter.com/dim0627](https://twitter.com/dim0627)

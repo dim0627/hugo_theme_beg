@@ -1,45 +1,212 @@
 html {
-    overflow-y: scroll;
+  font-size: 16px;
 }
 
-pre {
+body {
+  font-family: 'Open Sans', "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: inherit;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+}
+
+a {
+  transition-duration: .2s;
+  color: #000;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #000;
+  outline: none;
+  box-shadow: none;
+}
+
+a.tag {
+  font-size: .8rem;
+  color: #999;
+}
+
+a.tag:hover {
+  color: #333;
+}
+
+code:not(.hljs) {
+  font-size: .8rem;
+}
+
+img {
+  width: 100%;
+}
+
+.share {
+  text-align: right;
+}
+
+.share a {
+  display: inline-block;
+  color: #999;
+  padding: 0 .5rem;
+}
+
+header.site nav.navbar {
+  border-radius: 0;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+header.site .navbar-default .navbar-nav>li>a {
+  font-size: .8rem;
+}
+
+header.page-title {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+article.li .date {
+  font-size: .8rem;
+  line-height: 1rem;
+}
+
+article.li .title {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: .5rem;
+}
+
+article.li .body {
+  margin-bottom: 1rem;
+}
+
+article.single .article-header {
+  margin-bottom: 1rem;
+}
+
+article.single .article-header time {
+  font-size: .8rem;
+  line-height: 1rem;
+  display: block;
+}
+
+article.single .article-title {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+article.single .article-body {
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+article.single .article-body h1,
+article.single .article-body h2,
+article.single .article-body h3,
+article.single .article-body h4,
+article.single .article-body h5,
+article.single .article-body h6 {
+  word-break: break-all;
+}
+
+article.single h1 { font-size: 1.6rem; line-height: 2.4rem; }
+article.single h2 { font-size: 1.4rem; line-height: 2.1rem; }
+article.single h3 { font-size: 1.1rem; line-height: 1.7rem; }
+article.single h4 { font-size: 1rem; line-height: 1.5rem; }
+article.single h5 { font-size: 1rem; line-height: 1.5rem; }
+
+article.single .article-body h1:first-child,
+article.single .article-body h2:first-child,
+article.single .article-body h3:first-child,
+article.single .article-body h4:first-child,
+article.single .article-body h5:first-child,
+article.single .article-body h6:first-child {
+  margin-top: 0;
+}
+
+article.single .article-body h1 {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+article.single .article-body h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+article.single .article-body h3,
+article.single .article-body h4,
+article.single .article-body h5,
+article.single .article-body h6 {
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+article.single .article-body p {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+article.single .article-body blockquote {
+  padding: .5rem;
+  font-size: .8rem;
+  border-left: none;
+  background-color: #eee;
+}
+
+article.single .article-body blockquote p {
+  line-height: 1rem;
+}
+
+article.single .article-body blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+article.single .article-body pre {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+article.single aside {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  article.single aside {
     padding: 0;
+  }
 }
 
-pre code {
-    padding: .5em;
-    display: block;
+article.single aside .section {
+  margin-bottom: 2rem;
 }
 
-nav.navbar {
-    margin: 5px;
+footer.site {
+  padding: 3rem 0;
 }
 
-header.nav {
-    margin-bottom: 50px;
+footer.site p {
+  font-size: .8rem;
+  margin-bottom: .5rem;
+  color: #999;
 }
 
-.post-title {
-    margin-top: 0;
-}
-
-.post-content {
-    margin-bottom: 20px;
-}
-
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5 {
-    margin-top: 40px;
-}
-
-.post-tags,
-.post-rels {
-    margin-bottom: 50px;
-}
-
-footer.copy {
-    padding: 20px 0;
-}

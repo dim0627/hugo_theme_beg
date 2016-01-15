@@ -1,15 +1,14 @@
 {{ partial "default_head.html" . }}
-<div class="list terms">
+<div class="list">
 
   <div class="row">
     <div class="col-md-8">
-
       <header class="page-title">{{ .Title }}</header>
 
-      {{ range $key, $value := .Data.Terms }}
-      <a href="/{{ $.Data.Plural }}/{{ $key | urlize }}/">{{ $key }}</a>
+      {{ range (.Paginate .Data.Pages).Pages }}
+      {{ .Render "li" }}
       {{ end }}
-
+      {{ partial "pagination.html" . }}
     </div>
     <div class="col-md-4">
       {{ partial "sidebar.html" . }}

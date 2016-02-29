@@ -94,7 +94,7 @@ article.li .body {
 }
 
 article.single .article-header {
-  margin-bottom: 1rem;
+  margin: 1rem 0 2rem 0;
 }
 
 article.single .article-header time {
@@ -114,6 +114,12 @@ article.single .article-body {
   margin: 0 auto;
   margin-bottom: 1rem;
   padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  article.single .article-body {
+    padding: 0;
+  }
 }
 
 article.single .article-body h1,

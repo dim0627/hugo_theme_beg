@@ -22,13 +22,11 @@ body {
 
 a {
   transition-duration: .2s;
-  color: #000;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #000;
   outline: none;
   box-shadow: none;
 }

@@ -13,7 +13,7 @@
         <meta itemprop="description" content="{{ .Summary }}">
         <meta itemprop="url" content="{{ .Permalink }}">
         <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <meta itemprop="url" content="{{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }}" />
+          <img src="{{ with .Params.image }}{{ $.Site.BaseURL }}images/{{ . }}{{ else }}data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs={{ end }}" style="{{ with .Params.image }}{{ else }}height:0px;width:0px;{{ end }}" />
           <meta itemprop="width" content="800">
           <meta itemprop="height" content="800">
         </div>

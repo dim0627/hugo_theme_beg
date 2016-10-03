@@ -28,6 +28,7 @@
             <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
           </div>
 
+          {{ if ne (len .Site.Menus) 0 }}
           <div id="navbar" class="collapse navbar-collapse">
             {{ range .Site.Menus }}
             <ul class="nav navbar-nav navbar-right">
@@ -48,6 +49,7 @@
             </ul>
             {{ end }}
           </div>
+          {{ end }}
 
         </div>
       </nav>

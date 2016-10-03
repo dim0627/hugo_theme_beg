@@ -1,9 +1,9 @@
-name = "Solit"
+name = "Beg"
 license = "MIT"
-licenselink = "https://github.com/dim0627/hugo_theme-solit/blob/master/LICENSE.md"
-description = "Theme for Hugo that supports the Accelerated Mobile Pages Project(AMP)."
-tags = ["blog", "amp"]
-features = ["amp", "responsive", "seo", "thumbnail", "share button", "structured data", "ogp", "twitter cards"]
+licenselink = "https://github.com/dim0627/hugo_theme-beg/blob/master/LICENSE.md"
+description = "Bootstrap3 based theme for Hugo."
+tags = ["blog"]
+features = ["responsive", "thumbnail", "syntax highlight", "structured data", "ogp", "twitter cards"]
 min_version = 0.16
 
 [author]

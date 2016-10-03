@@ -21,6 +21,8 @@ This is the Bootstrap3 based theme for Hugo.
 * Twitter cards
 * OGP
 * Disqus
+* Syntax Highlight
+* Menu
 
 # `config.toml` example
 

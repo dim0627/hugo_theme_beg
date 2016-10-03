@@ -32,7 +32,7 @@ googleAnalytics = "UA-XXXXXXXX-XX" # Optional
 disqusShortname = "XYW"
 
 [params]
-  dateformat = "Jan 2, 2006" # Optional # Optional
+  dateformat = "Jan 2, 2006" # Optional
 ```
 
 # Frontmatter example
@@ -89,8 +89,6 @@ This mode is
 * Not show Google Analytics tags.
 * Show `IsDraft`.
 * Show `WordCount`.
-
-![screenshot](https://raw.githubusercontent.com/dim0627/hugo_theme_beg/master/images/development-mode.png)
 
 And set `{{ if ne (getenv "HUGO_ENV") "DEV" }} Set elements here. {{ end }}` if you want to place only in a production environment.
 

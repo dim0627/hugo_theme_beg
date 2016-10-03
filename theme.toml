@@ -1,6 +1,6 @@
 name = "Beg"
 license = "MIT"
-licenselink = "https://github.com/dim0627/hugo_theme-beg/blob/master/LICENSE.md"
+licenselink = "https://github.com/dim0627/hugo_theme_beg/blob/master/LICENSE.md"
 description = "Bootstrap3 based theme for Hugo."
 tags = ["blog"]
 features = ["responsive", "thumbnail", "syntax highlight", "structured data", "ogp", "twitter cards"]

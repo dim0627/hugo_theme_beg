@@ -1,20 +1,26 @@
-{{ partial "default_head.html" . }}
-<div class="list terms">
+{{ define "title" }}{{ .Title }} - {{ end }}
 
-  <div class="row">
-    <div class="col-md-8">
+{{ define "main" }}
+<div class="row">
+  <div class="col-md-8">
 
-      <header class="page-title">{{ .Title }}</header>
+    <header class="page-header">
+      <h1>{{ .Title }}</h1>
+    </header>
 
-      {{ range $key, $value := .Data.Terms }}
-      <a href="/{{ $.Data.Plural }}/{{ $key | urlize }}/">{{ $key }}</a>
-      {{ end }}
-
-    </div>
-    <div class="col-md-4">
-      {{ partial "sidebar.html" . }}
-    </div>
+    <section class="panel panel-default">
+      <div class="list-group">
+        {{ $data := .Data }}
+        {{ range $key, $value := .Data.Terms }}
+        <a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $key | urlize }}" class="list-group-item">{{ $key }} <span class="badge">{{ len $value }}</span></a>
+        {{ end }}
+      </div>
+    </section>
   </div>
 
+  <div class="col-md-4">
+    {{ partial "sidebar.html" . }}
+  </div>
 </div>
-{{ partial "default_foot.html" . }}
+{{ end }}
+

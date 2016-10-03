@@ -3,13 +3,13 @@
   <ul class="pager">
 
     {{ if .Paginator.HasPrev }}
-    <li><a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}">Previous</a></li>
+    <li><a href="{{ .Paginator.Prev.URL }}">Previous</a></li>
     {{ else }}
     <li class="disabled"><a href="#">Previous</a></li>
     {{ end }}
 
     {{ if .Paginator.HasNext }}
-    <li><a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}">Next</a></li>
+    <li><a href="{{ .Paginator.Next.URL }}">Next</a></li>
     {{ else }}
     <li class="disabled"><a href="#">Next</a></li>
     {{ end }}

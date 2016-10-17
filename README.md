@@ -24,6 +24,15 @@ This is the Bootstrap3 based theme for Hugo.
 * Syntax Highlight
 * Menu
 
+## Installation
+
+```
+$ cd themes
+$ git clone https://github.com/dim0627/hugo_theme_beg.git
+```
+
+[Hugo \- Installing Hugo](http://gohugo.io/overview/installing/)
+
 # `config.toml` example
 
 ```

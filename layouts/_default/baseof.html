@@ -8,6 +8,10 @@
     <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
     {{ block "meta" . }}{{ end }}
     <link href="{{ .Site.BaseURL }}css/styles.css" rel="stylesheet">
+    {{ range .Site.Params.custom_css }}
+        <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+    {{ end }}
+
   </head>
 
   <body>

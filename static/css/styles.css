@@ -17,6 +17,10 @@ p {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 ul,ol {
   margin: 0;
   padding: 0;
@@ -259,7 +263,6 @@ article.li.sm>header {
 }
 
 .article-body figure { margin: 1.5rem 0; }
-.article-body figure img, .article-body img { max-width: 100%; }
 .article-body figure.left,
 .article-body figure.right {
   width: 15rem;

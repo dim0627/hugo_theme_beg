@@ -259,7 +259,7 @@ article.li.sm>header {
 }
 
 .article-body figure { margin: 1.5rem 0; }
-.article-body figure img { max-width: 100%; }
+.article-body figure img, .article-body img { max-width: 100%; }
 .article-body figure.left,
 .article-body figure.right {
   width: 15rem;

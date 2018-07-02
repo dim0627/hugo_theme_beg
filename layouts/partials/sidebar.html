@@ -6,7 +6,7 @@
       <div class="panel-title">LATESTS</div>
     </div>
     <div class="list-group">
-      {{ range first 10 .Site.Pages }}
+      {{ range first 10 .Site.RegularPages }}
       <a href="{{ .Permalink }}" class="list-group-item">{{ .Title }}</a>
       {{ end }}
     </div>

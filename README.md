@@ -1,3 +1,7 @@
+```
+This theme is no longer maintained.
+```
+
 # What is this.
 
 This is the Bootstrap3 based theme for Hugo.
